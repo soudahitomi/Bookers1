@@ -1,2 +1,28 @@
-<h1></h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1>Books</h1>
+
+<table>
+
+  <thaed>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </thaed>
+
+  <tbody>
+
+  </tbody>
+
+</table>
+
+<h2>New book</h2>
+
+<%= form_with model: Book.new do |f| %>
+  <p>title</p>
+  <%= f.texe_field :title %>
+
+  <p>body</p>
+  <%= f.texe_area :body %>
+
+  <%= f.submit 'Create Book'%>
+<% end %>
