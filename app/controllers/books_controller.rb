@@ -7,6 +7,7 @@ class BooksController < ApplicationController
   def create
     book = Book.new(book_params)
     book.save
+    # Book was successfully created.
     redirect_to books_path
   end
 
@@ -14,9 +15,11 @@ class BooksController < ApplicationController
   end
 
   def edit
+    # Book was successfully updated.
   end
 
   def destroy
+    # Book was successfully destroyed.
   end
 
   private
