@@ -10,7 +10,16 @@
   </thaed>
 
   <tbody>
-
+    <tr>
+      <% @books.each do |book| %>
+        <td>
+          <%= book.title %>
+        </td>
+        <td>
+          <%= book.body %>
+        </td>
+      <% end %>
+    </tr>
   </tbody>
 
 </table>
@@ -19,10 +28,10 @@
 
 <%= form_with model: Book.new do |f| %>
   <p>title</p>
-  <%= f.texe_field :title %>
+  <%= f.text_field :title %>
 
   <p>body</p>
-  <%= f.texe_area :body %>
+  <%= f.text_area :body %>
 
   <%= f.submit 'Create Book'%>
 <% end %>
