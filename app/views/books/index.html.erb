@@ -21,7 +21,7 @@
         <td>
           <%= link_to "show", book_path(book.id) %>
           <%= link_to "edit", edit_book_path(book.id) %>
-          <%= link_to "destroy", book_path(book.id), method: :delete %>
+          <%= link_to "destroy", book_path(book.id), method: :delete, "data-confilm" => "Are you sure?" %>
         </td>
       <% end %>
     </tr>
