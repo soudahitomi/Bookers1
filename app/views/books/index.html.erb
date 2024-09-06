@@ -1,3 +1,4 @@
+<%= flash[:notice] %>
 <h1>Books</h1>
 
 <table>
@@ -8,23 +9,17 @@
     </tr>
   </thaed>
 
-  <tbody>
-    <tr>
-      <% @books.each do |book| %>
-        <td>
-          <%= book.title %>
-        </td>
-        <td>
-          <%= book.body %>
-        </td>
-        <td>
-          <%= link_to "show", book_path(book.id) %>
-          <%= link_to "edit", edit_book_path(book.id) %>
-          <%= link_to "destroy", book_path(book.id), method: :delete, "data-confilm" => "Are you sure?" %>
-        </td>
-      <% end %>
-    </tr>
-  </tbody>
+  <% @books.each do |book| %>
+    <tbody>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.body %></td>
+        <td><%= link_to "show", book_path(book.id) %></td>
+        <td><%= link_to "edit", edit_book_path(book.id) %></td>
+        <td><%= link_to "destroy", book_path(book.id), method: :delete, "data-confilm" => "Are you sure?" %></td>
+      </tr>
+    </tbody>
+  <% end %>
 </table>
 
 <h2>New book</h2>
